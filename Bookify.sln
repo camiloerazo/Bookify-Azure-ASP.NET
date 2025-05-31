@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "bookify.client", "bookify.client\bookify.client.esproj", "{37B2A6B4-4DC7-94A8-15E2-E28DA69DEE9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookify.Server", "Bookify.Server\Bookify.Server.csproj", "{F7A932DF-9750-4C83-B7CA-91C60322A130}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37B2A6B4-4DC7-94A8-15E2-E28DA69DEE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B2A6B4-4DC7-94A8-15E2-E28DA69DEE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B2A6B4-4DC7-94A8-15E2-E28DA69DEE9B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{37B2A6B4-4DC7-94A8-15E2-E28DA69DEE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B2A6B4-4DC7-94A8-15E2-E28DA69DEE9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37B2A6B4-4DC7-94A8-15E2-E28DA69DEE9B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F7A932DF-9750-4C83-B7CA-91C60322A130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7A932DF-9750-4C83-B7CA-91C60322A130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7A932DF-9750-4C83-B7CA-91C60322A130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7A932DF-9750-4C83-B7CA-91C60322A130}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B05B76A1-FFE9-482D-B969-DD84DD05C0EB}
+	EndGlobalSection
+EndGlobal

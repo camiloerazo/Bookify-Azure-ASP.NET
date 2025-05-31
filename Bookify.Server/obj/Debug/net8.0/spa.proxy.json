@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:57182",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\Juan camilo\\Desktop\\Bookify\\Bookify.Server\\..\\bookify.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

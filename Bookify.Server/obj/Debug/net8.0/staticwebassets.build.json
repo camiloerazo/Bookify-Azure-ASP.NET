@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "8NPz+4mJkTxgmKDcDtSTBOCj7xqN8j2naHI73nfQd+4=",
+  "Source": "Bookify.Server",
+  "BasePath": "_content/Bookify.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Juan camilo\\Desktop\\Bookify\\bookify.client\\bookify.client.esproj",
+      "Version": 2,
+      "Source": "bookify.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
