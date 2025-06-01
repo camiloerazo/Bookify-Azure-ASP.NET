@@ -8,7 +8,7 @@
 
 ## 📋 Description
 
-Bookify is a modern and robust hotel management platform that provides a complete solution for booking, check-in, and payment management of hotel establishments. Built with the latest technologies and best development practices, Bookify delivers a seamless experience for both guests and hotel administrators.
+Bookify is a modern and robust hotel management platform that provides a complete solution for booking, check-in, and payment management of hotel establishments. Built with the latest technologies and best development practices, Bookify delivers a seamless experience for both guests and hotel administrators. 
 
 ## 🚀 Key Features
 
