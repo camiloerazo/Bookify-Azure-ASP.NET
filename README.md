@@ -10,17 +10,6 @@
 
 Bookify is a modern hotel management platform built with ASP.NET Core and React, designed to provide a complete solution for hotel operations including booking management, check-in processes, and payment handling. The application follows a clean architecture approach with a clear separation between the frontend and backend services.
 
-## 🚀 Key Features
-
-- 🔐 Secure and customizable authentication system
-- 📅 Real-time booking system
-- 📱 Digital and in-person check-in
-- 💳 Secure payment processing
-- 📊 Intuitive admin dashboard
-- 📱 Responsive design and PWA
-- 🔔 Real-time notification system
-- 📈 Detailed analytics and reporting
-
 ## 🛠 Tech Stack
 
 ### Frontend (bookify.client)
@@ -136,4 +125,4 @@ For support, please open an issue in the repository.
 
 <div align="center">
   <sub>Built with ❤️ by the Bookify Team</sub>
-</div> 
+</div>
