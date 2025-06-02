@@ -2,13 +2,13 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/Status-In%20Development-blue" alt="Status: In Development"/>
-  <img src="https://img.shields.io/badge/Version-1.0.0-green" alt="Version: 1.0.0"/>
+  <img src="https://img.shields.io/badge/Version-0.1.0-green" alt="Version: 0.1.0"/>
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License: MIT"/>
 </div>
 
 ## 📋 Description
 
-Bookify is a modern and robust hotel management platform that provides a complete solution for booking, check-in, and payment management of hotel establishments. Built with the latest technologies and best development practices, Bookify delivers a seamless experience for both guests and hotel administrators.
+Bookify is a modern hotel management platform built with ASP.NET Core and React, designed to provide a complete solution for hotel operations including booking management, check-in processes, and payment handling. The application follows a clean architecture approach with a clear separation between the frontend and backend services.
 
 ## 🚀 Key Features
 
@@ -23,92 +23,55 @@ Bookify is a modern and robust hotel management platform that provides a complet
 
 ## 🛠 Tech Stack
 
-### Frontend
-- **Main Framework:** React 18
+### Frontend (bookify.client)
+- **Framework:** React 19
 - **Language:** TypeScript
-- **Global State:** Redux Toolkit
-- **Styling:** 
-  - Tailwind CSS
-  - Styled Components
-  - Material-UI
-- **Forms:** React Hook Form + Yup
-- **Charts:** Chart.js
-- **Date Management:** date-fns
-- **Testing:** Jest + React Testing Library
-- **Bundler:** Vite
+- **Build Tool:** Vite 6
+- **Routing:** React Router DOM 7
+- **Payment Integration:** PayPal React SDK
+- **Development Tools:**
+  - ESLint 9
+  - TypeScript 5.7
+  - Vite 6.3
 
-### Backend
-- **Framework:** Node.js with Express
-- **Language:** TypeScript
-- **Database:** 
-  - PostgreSQL (primary)
-  - Redis (cache and sessions)
-- **ORM:** Prisma
-- **Authentication:** 
-  - JWT
-  - OAuth 2.0
-  - Passport.js
+### Backend (Bookify.Server)
+- **Framework:** ASP.NET Core 8.0
+- **Database:** SQL Server with Entity Framework Core 9.0
 - **API Documentation:** Swagger/OpenAPI
-- **Testing:** Jest + Supertest
-- **Validation:** Zod
-
-### DevOps & Infrastructure
-- **Containerization:** Docker
-- **Orchestration:** Docker Compose
-- **CI/CD:** GitHub Actions
-- **Cloud:** AWS
-  - EC2 (servers)
-  - RDS (database)
-  - S3 (storage)
-  - CloudFront (CDN)
-- **Monitoring:** 
-  - Sentry
-  - New Relic
-- **Logging:** Winston + ELK Stack
-
-### Security
-- HTTPS/TLS
-- CSRF Protection
-- Rate Limiting
-- Input Sanitization
-- Sensitive Data Encryption
-- PCI DSS Compliance
-- Regular Security Audits
+- **Key Packages:**
+  - Microsoft.EntityFrameworkCore.SqlServer
+  - Microsoft.AspNetCore.SpaProxy
+  - Swashbuckle.AspNetCore
 
 ## 📦 Project Structure
 
 ```
 bookify/
-├── frontend/                 # React Application
-│   ├── src/
-│   │   ├── components/      # Reusable components
-│   │   ├── pages/          # Application pages
-│   │   ├── hooks/          # Custom hooks
-│   │   ├── store/          # Global state (Redux)
-│   │   ├── services/       # API services
-│   │   └── utils/          # Utilities
-│   └── public/             # Static assets
-├── backend/                 # Node.js API
-│   ├── src/
-│   │   ├── controllers/    # Controllers
-│   │   ├── models/         # Data models
-│   │   ├── routes/         # API routes
-│   │   ├── services/       # Business logic
-│   │   ├── middleware/     # Middleware
-│   │   └── utils/          # Utilities
-│   └── tests/              # Tests
-└── docker/                 # Docker configuration
+├── bookify.client/           # React Frontend Application
+│   ├── src/                 # Source code
+│   ├── public/             # Static assets
+│   ├── vite.config.ts      # Vite configuration
+│   └── package.json        # Frontend dependencies
+│
+├── Bookify.Server/          # ASP.NET Core Backend
+│   ├── Controllers/        # API Controllers
+│   ├── Data/              # Data access layer
+│   ├── Migrations/        # Database migrations
+│   ├── Program.cs         # Application entry point
+│   └── appsettings.json   # Configuration
+│
+└── Bookify.sln            # Solution file
 ```
 
-## 🚀 Installation and Development
+## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js >= 18.x
-- PostgreSQL >= 14
-- Redis >= 6
-- Docker & Docker Compose
+- .NET 8.0 SDK
+- Node.js 18+ and npm
+- SQL Server
+- Visual Studio 2022 or VS Code
 
-### Local Installation
+### Installation
 
 1. Clone the repository:
 ```bash
@@ -116,81 +79,58 @@ git clone https://github.com/your-username/bookify.git
 cd bookify
 ```
 
-2. Install dependencies:
+2. Backend Setup:
 ```bash
-# Frontend
-cd frontend
+cd Bookify.Server
+dotnet restore
+dotnet ef database update
+```
+
+3. Frontend Setup:
+```bash
+cd ../bookify.client
 npm install
-
-# Backend
-cd ../backend
-npm install
 ```
 
-3. Configure environment variables:
+4. Running the Application:
 ```bash
-# Backend
-cp .env.example .env
-# Frontend
-cd ../frontend
-cp .env.example .env
+# From the root directory
+dotnet run --project Bookify.Server
 ```
 
-4. Start with Docker:
-```bash
-docker-compose up -d
-```
+The application will be available at:
+- Frontend: https://localhost:57182
+- Backend API: https://localhost:5001
+- Swagger Documentation: https://localhost:5001/swagger
 
-5. Start in development mode:
-```bash
-# Backend
-cd backend
-npm run dev
+## 🧪 Development
 
-# Frontend
-cd frontend
-npm run dev
-```
-
-## 🧪 Testing
-
-```bash
-# Frontend
-cd frontend
-npm run test        # Unit tests
-npm run test:e2e    # E2E tests
-
-# Backend
-cd backend
-npm run test        # Unit tests
-npm run test:e2e    # E2E tests
-```
+- The backend uses Entity Framework Core for database operations
+- The frontend is configured with Vite for fast development
+- SPA Proxy is configured for seamless development experience
+- Hot reload is enabled for both frontend and backend
 
 ## 📚 Documentation
 
-- [API Documentation](docs/api/README.md)
-- [Contribution Guide](CONTRIBUTING.md)
-- [Deployment Guide](docs/deployment.md)
-- [System Architecture](docs/architecture.md)
+- API documentation is available through Swagger UI when running the application
+- Database schema can be viewed through Entity Framework migrations
+- Frontend component documentation is available in the source code
 
 ## 🤝 Contributing
 
-Contributions are welcome. Please read our [Contribution Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-## 👥 Team
-
-- **Product Owner** - [Name]
-- **Tech Lead** - [Name]
-- **Developers** - [Names]
-- **Designers** - [Names]
-
 ## 📞 Support
 
-For support, please contact [email@example.com] or open an issue in the repository.
+For support, please open an issue in the repository.
 
 ---
 
